@@ -5,7 +5,7 @@
 - **Who it's for:** Upstate SC homeowners, contractors, and property managers who need a dumpster dropped or junk hauled, fast, with an easy path to a quote.
 - **Space/industry:** Roll-off dumpster rental / waste hauling (Greenville & the Upstate, SC). Crowded, template/franchise-heavy field (In & Out Trash, Junk King, Bin There Dump That, WasteAway).
 - **Project type:** Static marketing site (HTML + Tailwind), conversion-focused.
-- **Real details:** phone **864-371-9361**; domain **fordswaste.com** (registered, not yet live). Logo = bold black "FORDS" over a red "WASTE" banner.
+- **Real details:** phone **864-371-9361**; domain **fordswaste.com** (registered, not yet live). Logo = bold black "FORDS" over a **hot-pink** "WASTE" banner (recreated in CSS as the header lockup; swap for the client's real vector when supplied).
 - **Memorable thing (PLACEHOLDER — confirm with Jordan Ford before copy locks):** "the Upstate's reliable hauler who makes it effortless."
 
 ## Aesthetic Direction
@@ -23,13 +23,13 @@
 - **Scale (rem):** hero 3.5–4.5 · h1 2.5 · h2 1.75 · h3 1.25 · body 1.0 (16px floor) · small 0.875 · mono-label 0.8125.
 
 ## Color
-- **Approach:** the real brand — **paper + black ink + white**, with the **brand RED** as the one loud accent (from the `@fordswaste_` logo + red roll-off containers). Kept scarce.
+- **Approach:** the real brand — **paper + black ink + white**, with the **brand PINK (hot magenta)** as the one loud accent (from the `@fordswaste_` logo + the hot-pink roll-off containers). Kept scarce.
 - **Background:** `#F4F1EA` — warm off-white (paper), not pure white.
 - **Surface:** `#FBFAF6` raised · `#E7E2D6` inset/secondary panels.
 - **Primary text / structural (ink):** `#1A1C1A` — near-black; rules, dispatch bar, footer.
 - **Muted text:** `#6B6A60`.
-- **Accent (brand RED):** `#C8202E` — the logo's "WASTE" banner and the red containers; owns the primary CTA. Used scarcely so it always means "act here."
-- **Semantic:** success `#2E7D4F` · warning `#E0A11B` · error `#8C1D13` (deep brick — kept distinct from the brand red so a form error never reads as a CTA).
+- **Accent (brand PINK):** `#E6157E` — the logo's "WASTE" banner and the hot-pink containers; owns the primary CTA. Used scarcely so it always means "act here." *(a11y note: pair with bold/large text on white; nudge darker if small-text contrast is needed.)*
+- **Semantic:** success `#2E7D4F` · warning `#E0A11B` · error `#8C1D13` (deep brick — kept distinct from the brand pink so a form error never reads as a CTA).
 - **Dark mode:** not required for v1 (light, paper-based). If added later: deep asphalt surfaces, orange held, saturation reduced ~15%.
 
 ## Spacing
@@ -51,7 +51,7 @@
 - **Patterns:** dispatch bar pins on scroll; service-area town ticker; subtle section reveals. No scroll choreography, no gradient/parallax flourishes.
 
 ## Anti-slop guardrails (enforce in QA)
-- No purple/violet gradients. No 3-column icon-in-circle feature grid. No centered-everything. No uniform bubble radius. No gradient CTA buttons. No generic stock-photo hero. No `system-ui` as display/body. The brand red stays scarce.
+- No purple/violet gradients. No 3-column icon-in-circle feature grid. No centered-everything. No uniform bubble radius. No gradient CTA buttons. No generic stock-photo hero. No `system-ui` as display/body. The brand pink stays scarce.
 
 ## Decisions Log
 | Date | Decision | Rationale |
@@ -59,4 +59,5 @@
 | 2026-05-30 | Initial design system created ("Dispatch Yard") | /design-consultation; Claude main + independent Claude subagent (Codex unavailable). Industrial-vernacular direction to differentiate from franchise-template competitors. |
 | 2026-05-30 | Stack = static HTML + Tailwind | Marty; matches chief-security-solutions-site + la-vida-landscapes-site. |
 | 2026-05-30 | Serif body (Newsreader) flagged as headline risk | Differentiator vs. trades-sans norm; swap to Hanken Grotesk if crisper feel wanted. Revisit after Jordan confirms the "memorable thing." |
-| 2026-05-30 | Rebrand to real brand from IG @fordswaste_ | Name "Fords Waste"; accent orange → brand **red #C8202E**; structural green → black (matches logo: black FORDS / red WASTE on white); positioning → roll-off-dumpster-forward (+ junk removal); real phone 864-371-9361; domain fordswaste.com. |
+| 2026-05-30 | Rebrand to real brand from IG @fordswaste_ | Name "Fords Waste"; structural green → black (matches logo on white); positioning → roll-off-dumpster-forward (+ junk removal); real phone 864-371-9361; domain fordswaste.com. |
+| 2026-05-30 | Accent corrected red → **hot pink #E6157E** (Marty) | The brand is hot magenta, not red — the WASTE banner + roll-off containers are pink. Also added a CSS logo lockup (black FORDS / pink WASTE banner) recreating the IG avatar; swap for the real vector when Jordan sends it. |
