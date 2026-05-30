@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ford Waste — Design System Preview (Dispatch Yard)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --surface:#FBFAF6; --inset:#E7E2D6;
+    --ink:#1A1C1A; --muted:#6B6A60; --green:#1F3B2C; --orange:#FF5B19;
+    --success:#2E7D4F; --warning:#E0A11B; --error:#C2371F;
+    --display:"Archivo",system-ui,sans-serif; --body:"Newsreader",Georgia,serif; --mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+  .mono{font-family:var(--mono)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+  /* dispatch bar */
+  .dispatch{background:var(--green);color:#EDEDE6;font-family:var(--mono);font-size:.8rem;letter-spacing:.04em}
+  .dispatch .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:9px 24px;flex-wrap:wrap}
+  .dispatch a{color:var(--orange);text-decoration:none;font-weight:600}
+  .ticker{color:#A9B5AC;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+  /* hero */
+  .hero{border-bottom:2px solid var(--ink)}
+  .hero .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;padding:56px 0 64px}
+  h1.statement{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,6vw,5rem);line-height:.94;letter-spacing:-.01em;text-transform:uppercase;margin:0}
+  .subhead{font-family:var(--mono);font-size:.9rem;letter-spacing:.06em;color:var(--ink);margin-top:18px;text-transform:uppercase}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--ink);border-radius:9999px;padding:4px 11px;color:var(--ink)}
+
+  /* weigh-ticket quote card */
+  .ticket{background:var(--surface);border:2px solid var(--ink);border-radius:4px;box-shadow:6px 6px 0 var(--ink)}
+  .ticket .head{background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;display:flex;justify-content:space-between}
+  .ticket .body{padding:16px 14px}
+  .drop{border:2px dashed var(--muted);border-radius:4px;background:var(--inset);text-align:center;padding:22px 10px;font-family:var(--mono);font-size:.8rem;color:var(--ink);letter-spacing:.04em}
+  .drop b{color:var(--orange)}
+  .field{margin-top:12px}
+  .field label{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px}
+  .field input{width:100%;font-family:var(--mono);font-size:.9rem;padding:9px 10px;border:1.5px solid var(--ink);border-radius:3px;background:#fff;color:var(--ink)}
+  .btn{display:inline-block;font-family:var(--mono);font-weight:600;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;border-radius:3px;padding:12px 18px;cursor:pointer;border:2px solid var(--ink);text-decoration:none;text-align:center}
+  .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange);width:100%;margin-top:14px;box-shadow:3px 3px 0 var(--ink)}
+  .btn-outline{background:transparent;color:var(--ink)}
+  .btn-ghost{background:transparent;border-color:transparent;color:var(--ink);text-decoration:underline}
+
+  section{padding:48px 0;border-bottom:1px solid var(--inset)}
+  h2.sec{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.5rem;letter-spacing:-.01em;margin:0 0 4px}
+  .sec-sub{color:var(--muted);margin:0 0 24px}
+
+  /* specimens */
+  .spec{border-top:1px solid var(--inset);padding:18px 0}
+  .spec p{margin:.4rem 0}
+  .big-serif{font-family:var(--body);font-size:1.35rem;max-width:62ch}
+
+  /* swatches */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .sw{border:1.5px solid var(--ink);border-radius:4px;overflow:hidden}
+  .sw .chip{height:64px}
+  .sw .meta{padding:8px 10px;font-family:var(--mono);font-size:.72rem}
+  .sw .meta .nm{display:block;color:var(--ink);text-transform:uppercase;letter-spacing:.05em}
+  .sw .meta .hx{color:var(--muted)}
+
+  /* components row */
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .card{background:var(--surface);border:1.5px solid var(--ink);border-radius:4px;padding:16px;max-width:300px}
+  .card h3{font-family:var(--display);text-transform:uppercase;font-size:1.05rem;margin:0 0 6px}
+  .alerts{display:grid;gap:8px;max-width:420px;margin-top:8px}
+  .alert{font-family:var(--mono);font-size:.82rem;padding:9px 12px;border-radius:3px;border-left:5px solid}
+  .a-s{background:#E9F2EC;border-color:var(--success);color:#1c5436}
+  .a-w{background:#FBF2DC;border-color:var(--warning);color:#7a5a10}
+  .a-e{background:#F7E4DF;border-color:var(--error);color:#7d2516}
+
+  footer{background:var(--green);color:#CBD3CC;font-family:var(--mono);font-size:.8rem;padding:22px 0}
+  .note{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:center;padding:20px}
+  @media(max-width:760px){.hero .grid{grid-template-columns:1fr;gap:28px;padding:32px 0}}
+</style>
+</head>
+<body>
+
+  <!-- DISPATCH BAR -->
+  <div class="dispatch"><div class="wrap">
+    <span>FORD WASTE · DISPATCH</span>
+    <span class="ticker">SERVING: GREENVILLE · GREER · SIMPSONVILLE · TAYLORS · MAULDIN · EASLEY · TRAVELERS REST</span>
+    <span>CALL/TEXT <a href="tel:">(864) 000-0000</a> · MON–SAT 7–6</span>
+  </div></div>
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap"><div class="grid">
+    <div>
+      <h1 class="statement">We haul<br>the Upstate.</h1>
+      <p class="subhead">Junk removal · Cleanouts · Roll-off rental — Greenville, SC</p>
+      <div class="tags">
+        <span class="tag">Residential</span><span class="tag">Commercial</span>
+        <span class="tag">Construction debris</span><span class="tag">10–40 yd roll-off</span>
+        <span class="tag">Licensed &amp; insured</span>
+      </div>
+      <p class="big-serif" style="margin-top:26px;color:var(--ink)">Fast, reliable, local. Send a photo of your junk and get a real price — no waiting on a callback, no runaround.</p>
+    </div>
+    <div class="ticket">
+      <div class="head"><span>QUOTE TICKET</span><span>FW-20</span></div>
+      <div class="body">
+        <div class="drop">SNAP YOUR JUNK<br><b>→ GET A PRICE</b><br><span style="color:var(--muted)">tap to add photos</span></div>
+        <div class="field"><label>Name</label><input value="" placeholder="Jordan F."></div>
+        <div class="field"><label>Phone / Zip</label><input value="" placeholder="864 · 29601"></div>
+        <div class="field"><label>What needs to go?</label><input value="" placeholder="Garage cleanout"></div>
+        <a href="#" class="btn btn-primary">Get my quote →</a>
+      </div>
+    </div>
+  </div></div></div>
+
+  <!-- TYPE -->
+  <section><div class="wrap">
+    <h2 class="sec">Typography</h2>
+    <p class="sec-sub">Archivo shouts · Newsreader speaks · IBM Plex Mono records.</p>
+    <div class="spec"><span class="label">Display — Archivo 900</span>
+      <p style="font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:2.4rem;line-height:1;margin:.3rem 0">Same-day junk removal</p></div>
+    <div class="spec"><span class="label">Body — Newsreader (serif, 16px floor)</span>
+      <p class="big-serif">A waste hauler that looks like a 40-year Main Street institution, not a gig-economy app. Serif body copy is the deliberate departure — it reads as permanent, local, and trustworthy.</p></div>
+    <div class="spec"><span class="label">UI / Data — IBM Plex Mono</span>
+      <p class="mono" style="font-size:.95rem">10 YD · 20 YD · 30 YD · 40 YD &nbsp;|&nbsp; (864) 000-0000 &nbsp;|&nbsp; ZIP 29601 · 29605 · 29615</p></div>
+  </div></section>
+
+  <!-- COLOR -->
+  <section><div class="wrap">
+    <h2 class="sec">Color</h2>
+    <p class="sec-sub">Paper + ink + yard-green, with one scarce hi-vis accent.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#F4F1EA"></div><div class="meta"><span class="nm">Paper</span><span class="hx">#F4F1EA</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E7E2D6"></div><div class="meta"><span class="nm">Inset</span><span class="hx">#E7E2D6</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1A1C1A"></div><div class="meta"><span class="nm">Ink</span><span class="hx">#1A1C1A</span></div></div>
+      <div class="sw"><div class="chip" style="background:#6B6A60"></div><div class="meta"><span class="nm">Muted</span><span class="hx">#6B6A60</span></div></div>
+      <div class="sw"><div class="chip" style="background:#1F3B2C"></div><div class="meta"><span class="nm">Yard green</span><span class="hx">#1F3B2C</span></div></div>
+      <div class="sw"><div class="chip" style="background:#FF5B19"></div><div class="meta"><span class="nm">Hi-vis</span><span class="hx">#FF5B19</span></div></div>
+      <div class="sw"><div class="chip" style="background:#2E7D4F"></div><div class="meta"><span class="nm">Success</span><span class="hx">#2E7D4F</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E0A11B"></div><div class="meta"><span class="nm">Warning</span><span class="hx">#E0A11B</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C2371F"></div><div class="meta"><span class="nm">Error</span><span class="hx">#C2371F</span></div></div>
+    </div>
+  </div></section>
+
+  <!-- COMPONENTS -->
+  <section><div class="wrap">
+    <h2 class="sec">Components</h2>
+    <p class="sec-sub">Squared, placard-like. The orange owns the primary action.</p>
+    <div class="row" style="margin-bottom:22px">
+      <a href="#" class="btn btn-primary" style="width:auto;margin:0">Get a quote →</a>
+      <a href="#" class="btn btn-outline">Call (864) 000-0000</a>
+      <a href="#" class="btn btn-ghost">See service area</a>
+    </div>
+    <div class="row">
+      <div class="card"><h3>Roll-off rental</h3><p style="margin:0">10–40 yard containers for cleanouts, renovations, and construction debris. Dropped when you need it, hauled when you're done.</p></div>
+      <div class="card"><h3>Junk removal</h3><p style="margin:0">Whole-house, garage, and estate cleanouts. We do the lifting. Send a photo, get a price.</p></div>
+    </div>
+    <div class="alerts">
+      <div class="alert a-s">✓ Quote request received — we'll text you a price shortly.</div>
+      <div class="alert a-w">! Add a photo for the fastest, most accurate quote.</div>
+      <div class="alert a-e">✕ That phone number doesn't look right — check and resend.</div>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">FORD WASTE · GREENVILLE &amp; THE UPSTATE, SC · LICENSED &amp; INSURED · BUILT BY TRAVERSE</div></footer>
+
+  <p class="note">DESIGN PREVIEW — "Dispatch Yard" system from DESIGN.md. Placeholder copy/phone/photos; brand assets pending from Jordan Ford. Not the production site.</p>
+
+</body>
+</html>
