@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Get a Quote — Ford Waste | Junk Removal &amp; Dumpster Rental</title>
+<meta name="description" content="Get a fast quote from Ford Waste. Send a photo of your junk, tell us what needs to go, and we'll send you a price. Greenville &amp; the Upstate, SC." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="dispatch"><div class="wrap">
+  <span>FORD WASTE · DISPATCH</span>
+  <span class="ticker">SERVING: GREENVILLE · GREER · SIMPSONVILLE · TAYLORS · MAULDIN · EASLEY · TRAVELERS REST</span>
+  <span>CALL/TEXT <a href="tel:+18640000000">(864) 000-0000</a></span>
+</div></div>
+<header class="site-head"><div class="wrap">
+  <a href="index.html" class="brand">Ford Waste</a>
+  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="services.html">Services</a><a href="service-area.html">Service Area</a>
+    <a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a>
+    <a href="quote.html" class="btn btn-primary" style="padding:8px 14px" aria-current="page">Get a Quote</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="page-head"><div class="wrap">
+  <h1>Get a quote</h1>
+  <p class="subhead">Snap a photo, tell us what needs to go, we'll send a price.</p>
+</div></div>
+
+<section><div class="wrap" style="display:grid;grid-template-columns:1.1fr .9fr;gap:40px">
+  <div>
+    <div class="ticket">
+      <div class="head"><span>QUOTE TICKET</span><span>FW-20</span></div>
+      <!-- NOTE: static site. Form backend pending (Basin/Formspark for photo attachments,
+           or an sms "text a photo" path). If a Formsubmit-style service is used, the FIRST
+           submission triggers an activation email — until it's clicked, later submissions
+           silently disappear. Verify activation before launch. See DESIGN.md / factory job. -->
+      <form class="body" action="#" method="post" enctype="multipart/form-data">
+        <div class="field"><label for="photos">Photos of your junk</label>
+          <input id="photos" name="photos" type="file" accept="image/*" multiple>
+          <p class="ph-note" style="margin:6px 0 0">Or text a photo to <a href="sms:+18640000000" style="color:var(--orange)">(864) 000-0000</a></p>
+        </div>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email"></div>
+        <div class="field"><label for="zip">Address / Zip</label><input id="zip" name="zip" placeholder="Street or zip" required></div>
+        <div class="field"><label for="service">What do you need?</label>
+          <select id="service" name="service">
+            <option>Junk removal</option><option>Cleanout</option><option>Roll-off dumpster rental</option>
+            <option>Construction debris</option><option>Yard / outdoor</option><option>Not sure</option>
+          </select></div>
+        <div class="field"><label for="desc">Tell us about it</label><textarea id="desc" name="desc" rows="3" placeholder="Garage cleanout, about a truckload"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:14px">Send my quote request →</button>
+        <p class="ph-note" style="margin-top:10px">[form delivery backend to be wired before launch]</p>
+      </form>
+    </div>
+  </div>
+  <div>
+    <h2 class="sec">How it works</h2>
+    <ol class="mono" style="font-size:.9rem;line-height:2;padding-left:18px">
+      <li>Send a photo + a few details</li>
+      <li>We text you a price</li>
+      <li>We show up and haul it</li>
+    </ol>
+    <p class="lead" style="margin-top:18px">Prefer to talk? Call or text <a href="tel:+18640000000" style="color:var(--orange)">(864) 000-0000</a>, Mon–Sat 7–6.</p>
+    <div class="alert a-w" style="margin-top:18px">Add a photo for the fastest, most accurate quote.</div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>Ford Waste</h4><p>Junk removal, cleanouts &amp; roll-off dumpster rental across Greenville &amp; the Upstate, SC. Licensed &amp; insured.</p></div>
+    <div><h4>Contact</h4><p>Call/Text <a href="tel:+18640000000">(864) 000-0000</a><br><a href="mailto:hello@fordwaste.example">hello@fordwaste.example</a><br>Mon–Sat 7–6</p></div>
+    <div><h4>Site</h4><p><a href="services.html">Services</a> · <a href="service-area.html">Service Area</a> · <a href="quote.html">Get a Quote</a> · <a href="contact.html">Contact</a></p></div>
+  </div>
+  <div style="margin-top:18px;color:#8a948c">© Ford Waste · Built by Traverse · <span class="ph-note">placeholder content — pending client assets</span></div>
+</div></footer>
+<script src="app.js"></script>
+</body>
+</html>

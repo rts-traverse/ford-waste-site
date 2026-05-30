@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap URL uses a placeholder domain — update to the real domain at launch.
+Sitemap: https://fordwaste.example/sitemap.xml

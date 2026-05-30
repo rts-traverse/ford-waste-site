@@ -1,45 +1,119 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ford Waste — Junk Removal &amp; Dumpster Rental | Greenville, SC</title>
-  <meta name="description" content="Ford Waste — fast, reliable junk removal, cleanouts, and roll-off dumpster rental serving Greenville and the Upstate of South Carolina. Get a quote today." />
-  <!-- Tailwind Play CDN (baseline scaffold; design system + theme come from DESIGN.md) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ford Waste — Junk Removal &amp; Dumpster Rental | Greenville, SC</title>
+<meta name="description" content="Ford Waste — fast, reliable junk removal, cleanouts, and roll-off dumpster rental serving Greenville and the Upstate of South Carolina. Send a photo, get a quote." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ford Waste","description":"Junk removal, cleanouts, and roll-off dumpster rental in Greenville and the Upstate of South Carolina.","areaServed":"Greenville, SC and the Upstate","telephone":"+1-864-000-0000","address":{"@type":"PostalAddress","addressLocality":"Greenville","addressRegion":"SC","addressCountry":"US"},"url":"https://fordwaste.example/"}
+</script>
 </head>
-<body class="min-h-screen bg-white text-neutral-900 antialiased">
-  <!-- NOTE: Baseline placeholder. Visual system (color, type, layout) is defined by the
-       design pass in DESIGN.md and applied during the styled build (M1–M5). -->
-  <header class="border-b border-neutral-200">
-    <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-      <span class="text-lg font-semibold tracking-tight">Ford Waste</span>
-      <a href="tel:" class="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white">
-        Get a Quote
-      </a>
-    </div>
-  </header>
+<body>
+<div class="dispatch"><div class="wrap">
+  <span>FORD WASTE · DISPATCH</span>
+  <span class="ticker">SERVING: GREENVILLE · GREER · SIMPSONVILLE · TAYLORS · MAULDIN · EASLEY · TRAVELERS REST</span>
+  <span>CALL/TEXT <a href="tel:+18640000000">(864) 000-0000</a></span>
+</div></div>
+<header class="site-head"><div class="wrap">
+  <a href="index.html" class="brand">Ford Waste</a>
+  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="services.html">Services</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html" class="btn btn-primary" style="padding:8px 14px">Get a Quote</a>
+  </nav>
+</div></header>
 
-  <main class="mx-auto max-w-5xl px-4">
-    <section class="py-20 text-center">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
-        Junk removal &amp; dumpster rental in Greenville, SC
-      </h1>
-      <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">
-        Fast, reliable, local. Send a photo and get a quote.
-      </p>
-      <div class="mt-8 flex items-center justify-center gap-3">
-        <a href="#quote" class="rounded-md bg-neutral-900 px-5 py-3 font-medium text-white">Get a Quote</a>
-        <a href="tel:" class="rounded-md border border-neutral-300 px-5 py-3 font-medium">Call us</a>
-      </div>
-      <p class="mt-10 text-sm text-neutral-400">Baseline scaffold — pending brand, content, and design pass.</p>
-    </section>
-  </main>
-
-  <footer class="border-t border-neutral-200">
-    <div class="mx-auto max-w-5xl px-4 py-8 text-sm text-neutral-500">
-      Ford Waste · Greenville &amp; the Upstate, SC · Built by Traverse
+<main>
+<div class="hero"><div class="wrap"><div class="grid">
+  <div>
+    <h1 class="statement">We haul<br>the Upstate.</h1>
+    <p class="subhead">Junk removal · Cleanouts · Roll-off rental — Greenville, SC</p>
+    <div class="tags">
+      <span class="tag">Residential</span><span class="tag">Commercial</span>
+      <span class="tag">Construction debris</span><span class="tag">10–40 yd roll-off</span>
+      <span class="tag">Licensed &amp; insured</span>
     </div>
-  </footer>
+    <p class="lead" style="margin-top:26px">Fast, reliable, local. Send a photo of your junk and get a real price — no waiting on a callback, no runaround.</p>
+    <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+      <a href="quote.html" class="btn btn-primary">Get a quote →</a>
+      <a href="tel:+18640000000" class="btn btn-outline">Call (864) 000-0000</a>
+    </div>
+  </div>
+  <div class="ticket">
+    <div class="head"><span>QUOTE TICKET</span><span>FW-20</span></div>
+    <form class="body" action="quote.html" method="get">
+      <div class="drop">SNAP YOUR JUNK<br><b>→ GET A PRICE</b><br><span style="color:var(--muted)">add photos on the next step</span></div>
+      <div class="field"><label for="h-name">Name</label><input id="h-name" name="name" placeholder="Your name"></div>
+      <div class="field"><label for="h-phone">Phone / Zip</label><input id="h-phone" name="phone" placeholder="864 · 29601"></div>
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:14px">Start my quote →</button>
+    </form>
+  </div>
+</div></div></div>
+
+<section><div class="wrap">
+  <h2 class="sec">What we haul</h2>
+  <p class="sec-sub">One call clears it out. <span class="ph-note">[services pending confirmation from Jordan]</span></p>
+  <div class="grid-cards">
+    <div class="card"><span class="label">Residential</span><h3>Junk removal &amp; cleanouts</h3><p>Whole-house, garage, attic, and estate cleanouts. We do the lifting and the loading.</p></div>
+    <div class="card"><span class="label">Roll-off</span><h3>Dumpster rental</h3><p>10–40 yard containers for renovations, cleanouts, and construction debris. Dropped when you need it.</p></div>
+    <div class="card"><span class="label">Commercial</span><h3>Business &amp; property</h3><p>Office, retail, and property cleanouts. Reliable scheduling for property managers and contractors.</p></div>
+    <div class="card"><span class="label">Outdoor</span><h3>Yard &amp; construction debris</h3><p>Storm debris, demo material, and yard waste hauled away fast.</p></div>
+  </div>
+  <p style="margin-top:18px"><a href="services.html" class="btn btn-ghost">See all services →</a></p>
+</div></section>
+
+<section style="background:var(--surface)"><div class="wrap">
+  <h2 class="sec">Why Ford Waste</h2>
+  <div class="grid-cards" style="margin-top:8px">
+    <div class="card"><h3>Local</h3><p>Greenville-based and Upstate-proud. You get a neighbor, not a call center.</p></div>
+    <div class="card"><h3>Fast</h3><p>Photo in, price out. Same-day and next-day pickups when we can.</p></div>
+    <div class="card"><h3>Licensed &amp; insured</h3><p class="ph">Properly licensed and insured. <span class="ph-note">[confirm w/ Jordan]</span></p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="sec">Where we work</h2>
+  <p class="sec-sub">Across Greenville &amp; the Upstate. <span class="ph-note">[confirm coverage w/ Jordan]</span></p>
+  <div class="towns">
+    <span class="tag">Greenville</span><span class="tag">Greer</span><span class="tag">Simpsonville</span>
+    <span class="tag">Taylors</span><span class="tag">Mauldin</span><span class="tag">Easley</span>
+    <span class="tag">Travelers Rest</span><span class="tag">Fountain Inn</span>
+  </div>
+  <p style="margin-top:18px"><a href="service-area.html" class="btn btn-ghost">Full service area →</a></p>
+</div></section>
+
+<section style="background:var(--surface)"><div class="wrap">
+  <h2 class="sec">What folks say</h2>
+  <p class="sec-sub ph-note">[real Google/BBB reviews to be added once profiles are shared]</p>
+  <div class="grid-cards">
+    <div class="quote-card ph"><p>"Showed up on time, hauled a full garage in under an hour. Easy."</p><span class="who">— Placeholder review</span></div>
+    <div class="quote-card ph"><p>"Texted a photo, got a price, done the next day. Will use again."</p><span class="who">— Placeholder review</span></div>
+  </div>
+</div></section>
+
+<section class="center"><div class="wrap">
+  <h2 class="sec" style="display:inline-block">Got junk? Get it gone.</h2>
+  <p class="sec-sub">Send a photo and we'll send a price.</p>
+  <a href="quote.html" class="btn btn-primary">Get a quote →</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>Ford Waste</h4><p>Junk removal, cleanouts &amp; roll-off dumpster rental across Greenville &amp; the Upstate, SC. Licensed &amp; insured.</p></div>
+    <div><h4>Contact</h4><p>Call/Text <a href="tel:+18640000000">(864) 000-0000</a><br><a href="mailto:hello@fordwaste.example">hello@fordwaste.example</a><br>Mon–Sat 7–6</p></div>
+    <div><h4>Site</h4><p><a href="services.html">Services</a> · <a href="service-area.html">Service Area</a> · <a href="quote.html">Get a Quote</a> · <a href="contact.html">Contact</a></p></div>
+  </div>
+  <div style="margin-top:18px;color:#8a948c">© Ford Waste · Built by Traverse · <span class="ph-note">placeholder content — pending client assets</span></div>
+</div></footer>
+<script src="app.js"></script>
 </body>
 </html>
