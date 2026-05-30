@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Placeholder domain (fordwaste.example) — update to the real domain at launch. -->
+<!-- Real domain fordswaste.com (registered, not yet serving the new site) — confirm www vs apex at launch. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fordwaste.example/</loc></url>
-  <url><loc>https://fordwaste.example/services.html</loc></url>
-  <url><loc>https://fordwaste.example/service-area.html</loc></url>
-  <url><loc>https://fordwaste.example/quote.html</loc></url>
-  <url><loc>https://fordwaste.example/about.html</loc></url>
-  <url><loc>https://fordwaste.example/reviews.html</loc></url>
-  <url><loc>https://fordwaste.example/contact.html</loc></url>
+  <url><loc>https://www.fordswaste.com/</loc></url>
+  <url><loc>https://www.fordswaste.com/services.html</loc></url>
+  <url><loc>https://www.fordswaste.com/service-area.html</loc></url>
+  <url><loc>https://www.fordswaste.com/quote.html</loc></url>
+  <url><loc>https://www.fordswaste.com/about.html</loc></url>
+  <url><loc>https://www.fordswaste.com/reviews.html</loc></url>
+  <url><loc>https://www.fordswaste.com/contact.html</loc></url>
 </urlset>

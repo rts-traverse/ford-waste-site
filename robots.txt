@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap URL uses a placeholder domain — update to the real domain at launch.
-Sitemap: https://fordwaste.example/sitemap.xml
+# Real domain (fordswaste.com) — confirm www vs apex at launch.
+Sitemap: https://www.fordswaste.com/sitemap.xml
